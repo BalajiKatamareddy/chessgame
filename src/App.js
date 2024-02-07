@@ -1,25 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from './home';
+import Menu from './menu';
+import About from './about';
+import Rules from './rules';
+import Chessboard from './chessboard';
+// import Pawn from './pawn';
+import Tile from './tile';
+import Footer from './footer';
+function App(){
+  return(
+<div className='App'>
+  <BrowserRouter>
+  <Menu />
+    <Routes>
+      <Route path="/" element={<Home/>}/>
+      <Route path="/about" element={<About/>}/>
+      <Route path="/rules" element={<Rules/>}/>
+      <Route path="/tile" element={<Tile/>}/>      
+      <Route path="/chessboard" element={<Chessboard/>}/>
+    </Routes>
+  </BrowserRouter>
+  <Footer/>
+</div>
   );
 }
-
 export default App;

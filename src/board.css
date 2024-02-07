@@ -1,0 +1,26 @@
+#app1{
+    display: grid;
+    height: 100vh;
+    place-content: center;
+}
+#chessboard {
+    background-color: yellowgreen;
+    display: grid;
+    grid-template-columns: repeat(8, 100px);
+    grid-template-rows: repeat(8, 100px);
+    width: 800px; /* Adjusted to match the size of the tiles */
+    height: 800px; /* Adjusted to match the size of the tiles */
+}
+
+#chessboard .tile {
+    width: 100px;
+    height: 100px;
+}
+
+#chessboard .black-tile {
+    background-color: #964B00;
+}
+
+#chessboard .white-tile {
+    background-color: white;
+}
